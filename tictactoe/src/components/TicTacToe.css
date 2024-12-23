@@ -1,0 +1,90 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #242424; /* Ensure consistent dark background */
+  border-radius: 10px;
+}
+
+.status {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  justify-content: center; /* Ensure the board is horizontally centered */
+  align-items: center; /* Ensure the board is vertically centered */
+}
+
+.square-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 2px solid #000;
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square:hover {
+  background-color: #f0f0f0;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.reset {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.reset:hover {
+  background-color: #45a049;
+}
+
+/* Adjust for light mode */
+@media (prefers-color-scheme: light) {
+  .square {
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    color: #213547;
+  }
+
+  .square:hover {
+    background-color: #e0e0e0;
+  }
+
+  .reset {
+    background-color: #f9f9f9;
+    color: #213547;
+  }
+
+  .reset:hover {
+    background-color: #e8e8e8;
+  }
+}
+
